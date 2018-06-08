@@ -1,0 +1,205 @@
+header {
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0 20px;
+  background-color: white;
+}
+
+header .logo {
+  height: 20px;
+  width: 20px;
+  box-sizing: border-box;
+  fill: #22272E;
+}
+
+header .main-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+header .main-links > * {
+  margin-left: 20px;
+  position: relative;
+}
+
+header .main-nav:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  left: 0;
+  bottom: -25px;
+}
+
+header .main-nav:hover:after {
+  background-color: #D5DAE0;
+}
+
+header .nav-active:after {
+  background-color: #22272E;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding: 0 20px;
+  background-color: #F2F4F6;
+  font: #627386;
+}
+
+.grid-main {
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* repeat = as many times as you can fit */
+  /* auto-fit = fit as many items on the line as possible, go bigger if you need to */
+  /*minmax = (min size, max size) = the minimum size the column should be is 200px, but if there's space then give them all 1fr of that width. */
+  grid-gap: 20px;
+  background-color: #F2F4F6;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+html {
+  font: 400 14px/10px "nutanix_soft", san-serif;
+  text-rendering: optimizeSpeed;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  background-color: #FFFFFF;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1 {
+  font: 200 29px/20px "nutanix_soft", san-serif;
+}
+
+h2 {
+  font: 400 18px/12px "nutanix_soft", san-serif;
+}
+
+h3 {
+  font: 500 14px/10px "nutanix_soft", san-serif;
+}
+
+h4 {
+  font: 400 12px/8px "nutanix_soft", san-serif;
+}
+
+p {
+  font: 400 14px/22px "nutanix_soft", san-serif;
+}
+
+main {
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  max-width: 1080px;
+  padding: 40px 20px;
+}
+
+.card {
+  height: 300px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.02), 0 3px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 1px 0 rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+  background-color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  position: relative;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card h2 {
+  line-height: 1.5;
+}
+
+.card h3 {
+  position: absolute;
+  bottom: 0;
+  color: #D5DAE0;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale3d(1.04, 1.04, 0);
+}
+
+.featured {
+  background: url("../img/learn.jpg");
+  grid-column: span 2;
+  background-size: cover;
+  color: white;
+}
+
+.featured code {
+  color: white;
+}
+
+code {
+  color: #627386;
+  text-transform: capitalize;
+  font: 400 14px/22px "nutanix_soft", san-serif;
+}
+
+.hero {
+  padding: 80px 0;
+}
+
+.terciary {
+  background-color: #F2F4F6;
+  border: none;
+  border-radius: 20px;
+  font: 400 14px/22px "nutanix_soft", san-serif;
+  font-size: 14px;
+  padding: 0 15px;
+}
+
+.terciary:hover {
+  background-color: #D5DAE0;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.filter-active, .filter-active:hover {
+  background-color: #22272E;
+  color: white;
+}
+
+.filters {
+  margin: 0px 0 40px 0;
+}

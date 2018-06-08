@@ -1,0 +1,47 @@
+
+
+//main header styling
+header{
+  @include size(60px, 100%);
+  @include flex(center, space-between, row);
+  padding: 0 20px;
+  background-color: white;
+
+  .logo{
+    @include size(20px, 20px);
+    fill: $font-color-1;
+  }
+
+  .main-links{
+    @include flex(center, center, row);
+    > * {
+      margin-left: 20px;
+      position: relative;
+    }
+  }
+
+  .main-nav{
+    &:after{
+      content: '';
+      position: absolute;
+      @include size(1px,100%);
+      background-color: transparent;
+      left: 0;
+      bottom:-25px;
+    }
+    &:hover:after{background-color: $border-color-2;}
+  }
+  .nav-active{
+    &:after{background-color: $font-color-1;}
+  }
+}
+
+//subheader{
+
+nav{
+  @include size(50px, 100%);
+  @include flex(center, flex-start, row);
+  padding: 0 20px;
+  background-color: $background-color-3;
+  font: $font-color-2;
+}
