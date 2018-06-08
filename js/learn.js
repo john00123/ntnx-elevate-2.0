@@ -58,6 +58,66 @@ const learn = {
     description:``,
     type:`Video`,
     section: `calm`
+  },
+  installingCalm:{
+    title:`Installing Nutanix Calm & Launching Apps from the Marketplace`,
+    description:``,
+    type:`Video`,
+    section: `calm`
+  },
+  customBlueprints:{
+    title:`Building Custom Blueprints in Nutanix Calm`,
+    description:``,
+    type:`Video`,
+    section: `calm`
+  },
+  ahvInstall:{
+    title:`AHV Requirements`,
+    description:``,
+    type:`Video`,
+    section: `ahv`
+  },
+  hypervisor101:{
+    title:`Acroplis hypervisor 101`,
+    description:``,
+    type:`Site`,
+    section: `ahv`
+  },
+  ahvmigrate:{
+    title:`How to migrate to AHV`,
+    description:``,
+    type:`PDF`,
+    section: `ahv`
+  },
+  ahvvalidate:{
+    title:`Validating AHV Solutions`,
+    description:``,
+    type:`PDF`,
+    section: `core`
+  },
+  core:{
+    title:`Nutanix Core Strucutres`,
+    description:``,
+    type:`Site`,
+    section: `core`
+  },
+  apiPc:{
+    title:`Which API to choose`,
+    description:``,
+    type:`Video`,
+    section: `api`
+  },
+  api3:{
+    title:`What's new on API v3`,
+    description:``,
+    type:`site`,
+    section: `api`
+  },
+  api2:{
+    title:`Learning API v2`,
+    description:``,
+    type:`site`,
+    section: `api`
   }
 };
 
