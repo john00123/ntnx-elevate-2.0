@@ -33,4 +33,8 @@
     cursor: pointer;
     transform: scale3d(1.04,1.04,0);
   }
+
+  &:active{
+    transform: scale3d(0.94,0.94,0);
+  }
 }
