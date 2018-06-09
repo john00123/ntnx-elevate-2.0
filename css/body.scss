@@ -1,15 +1,36 @@
 
+//main layout
 .grid-main{
   @include size(auto, 100%);
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  /* repeat = as many times as you can fit */
-  /* auto-fit = fit as many items on the line as possible, go bigger if you need to */
-  /*minmax = (min size, max size) = the minimum size the column should be is 200px, but if there's space then give them all 1fr of that width. */
   grid-gap: 20px;
-
   background-color:$background-color-3;
-  padding: 20px;
   border-radius: 4px;
+  padding: 20px;
+}
+
+//general card look
+.card{
+  @include size(300px, 100%);
+  @include flex(flex-start, center, column);
+  @include shadow();
+  @include transition(transform);
+
+  border-radius: 4px;
+  background-color: white;
+  padding: 15px;
+  position: relative;
+
+  h2{line-height: 1.5};
+  h3{
+    position: absolute;
+    bottom: 0;
+    color:$border-color-2
+  };
+
+  &:hover{
+    cursor: pointer;
+    transform: scale3d(1.04,1.04,0);
+  }
 }

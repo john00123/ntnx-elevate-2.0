@@ -1,0 +1,45 @@
+
+//filter bars
+
+
+.terciary{
+  background-color: $background-color-3;
+  border: none;
+  border-radius: 20px;
+  font:$p;
+  font-size: 14px;
+  padding: 0 15px;
+  &:hover{
+    background-color: $light-grey-2;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+.filter-active, .filter-active:hover{
+  background-color: $font-color-1;
+  color: white;
+}
+
+.filters{
+  margin: 0px 0 40px 0;
+}
+
+
+
+//card styling for learn
+.featured{
+  background: url('../img/learn.jpg');
+  grid-column: span 2;
+  background-size: cover;
+  color:white;
+  code{color:white;}
+}
+
+.featured2{
+  background: url('../img/ahv.jpg');
+  grid-column: span 2;
+  background-size: cover;
+  color:white;
+  code{color:white;}
+}

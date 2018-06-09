@@ -1,0 +1,19 @@
+
+
+.active-validation{
+  @include size(auto, 100%);
+  @include flex( center, flex-start, row);
+  background-color: $semi-white-blue;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  padding: 0 20px;
+  svg{
+    @include flex(center, center, row);
+    @include size(32px, 32px);
+    padding: 8px;
+    fill: $white;
+    background-color: $blue-1;
+    border-radius: 4pc;
+    margin-right: 20px;
+  }
+}

@@ -21,6 +21,7 @@ header{
   }
 
   .main-nav{
+    &:hover{cursor: pointer;}
     &:after{
       content: '';
       position: absolute;
@@ -31,8 +32,10 @@ header{
     }
     &:hover:after{background-color: $border-color-2;}
   }
+
   .nav-active{
     &:after{background-color: $font-color-1;}
+    &:hover:after{background-color: $font-color-1;}
   }
 }
 
@@ -44,4 +47,8 @@ nav{
   padding: 0 20px;
   background-color: $background-color-3;
   font: $font-color-2;
+}
+
+.active-validation{
+  background-color: $background-color-3;
 }

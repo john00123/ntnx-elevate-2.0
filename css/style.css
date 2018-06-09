@@ -29,6 +29,10 @@ header .main-links > * {
   position: relative;
 }
 
+header .main-nav:hover {
+  cursor: pointer;
+}
+
 header .main-nav:after {
   content: '';
   position: absolute;
@@ -48,6 +52,10 @@ header .nav-active:after {
   background-color: #22272E;
 }
 
+header .nav-active:hover:after {
+  background-color: #22272E;
+}
+
 nav {
   height: 50px;
   width: 100%;
@@ -61,19 +69,126 @@ nav {
   font: #627386;
 }
 
+.active-validation {
+  background-color: #F2F4F6;
+}
+
 .grid-main {
   height: auto;
   width: 100%;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  /* repeat = as many times as you can fit */
-  /* auto-fit = fit as many items on the line as possible, go bigger if you need to */
-  /*minmax = (min size, max size) = the minimum size the column should be is 200px, but if there's space then give them all 1fr of that width. */
   grid-gap: 20px;
   background-color: #F2F4F6;
-  padding: 20px;
   border-radius: 4px;
+  padding: 20px;
+}
+
+.card {
+  height: 300px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.02), 0 3px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 1px 0 rgba(0, 0, 0, 0.02);
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 4px;
+  background-color: white;
+  padding: 15px;
+  position: relative;
+}
+
+.card h2 {
+  line-height: 1.5;
+}
+
+.card h3 {
+  position: absolute;
+  bottom: 0;
+  color: #D5DAE0;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale3d(1.04, 1.04, 0);
+}
+
+.terciary {
+  background-color: #F2F4F6;
+  border: none;
+  border-radius: 20px;
+  font: 400 14px/22px "nutanix_soft", san-serif;
+  font-size: 14px;
+  padding: 0 15px;
+}
+
+.terciary:hover {
+  background-color: #D5DAE0;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.filter-active, .filter-active:hover {
+  background-color: #22272E;
+  color: white;
+}
+
+.filters {
+  margin: 0px 0 40px 0;
+}
+
+.featured {
+  background: url("../img/learn.jpg");
+  grid-column: span 2;
+  background-size: cover;
+  color: white;
+}
+
+.featured code {
+  color: white;
+}
+
+.featured2 {
+  background: url("../img/ahv.jpg");
+  grid-column: span 2;
+  background-size: cover;
+  color: white;
+}
+
+.featured2 code {
+  color: white;
+}
+
+.active-validation {
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  background-color: #f4fbff;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  padding: 0 20px;
+}
+
+.active-validation svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 32px;
+  width: 32px;
+  box-sizing: border-box;
+  padding: 8px;
+  fill: #FFFFFF;
+  background-color: #22A5F7;
+  border-radius: 4pc;
+  margin-right: 20px;
 }
 
 html {
@@ -116,6 +231,23 @@ p {
   font: 400 14px/22px "nutanix_soft", san-serif;
 }
 
+a {
+  color: #22A5F7;
+  font: 400 14px/10px "nutanix_soft", san-serif;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+code {
+  color: #627386;
+  text-transform: capitalize;
+  font: 400 14px/22px "nutanix_soft", san-serif;
+}
+
 main {
   height: auto;
   width: 100%;
@@ -128,78 +260,10 @@ main {
   padding: 40px 20px;
 }
 
-.card {
-  height: 300px;
-  width: 100%;
-  box-sizing: border-box;
-  box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.02), 0 3px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 1px 0 rgba(0, 0, 0, 0.02);
-  border-radius: 4px;
-  background-color: white;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  padding: 15px;
-  position: relative;
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.card h2 {
+.subtitle {
   line-height: 1.5;
-}
-
-.card h3 {
-  position: absolute;
-  bottom: 0;
-  color: #D5DAE0;
-}
-
-.card:hover {
-  cursor: pointer;
-  transform: scale3d(1.04, 1.04, 0);
-}
-
-.featured {
-  background: url("../img/learn.jpg");
-  grid-column: span 2;
-  background-size: cover;
-  color: white;
-}
-
-.featured code {
-  color: white;
-}
-
-code {
-  color: #627386;
-  text-transform: capitalize;
-  font: 400 14px/22px "nutanix_soft", san-serif;
 }
 
 .hero {
   padding: 80px 0;
-}
-
-.terciary {
-  background-color: #F2F4F6;
-  border: none;
-  border-radius: 20px;
-  font: 400 14px/22px "nutanix_soft", san-serif;
-  font-size: 14px;
-  padding: 0 15px;
-}
-
-.terciary:hover {
-  background-color: #D5DAE0;
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-.filter-active, .filter-active:hover {
-  background-color: #22272E;
-  color: white;
-}
-
-.filters {
-  margin: 0px 0 40px 0;
 }

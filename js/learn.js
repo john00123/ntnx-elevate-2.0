@@ -122,3 +122,68 @@ const learn = {
 };
 
 const sections = ['All','General','Training','Calm','AHV','Core','API'];
+
+$('#learn').click(()=>{
+  $('nav').html (`<h3 class='alt'>Home &nbsp; › &nbsp;  Learn</h3>`)
+
+  //initial load
+  $('main').html(
+    `
+      <div class='hero'>
+        <h1 class='title'>Learn</h1>
+        <h2 class='subtitle'>
+          Collection of articles, videos, and resources for our partners.
+        </h2>
+      </div>
+
+      <section class='filters'></section>
+      <section class='grid-main'></section>
+    `
+  );
+
+
+  //filter
+  sections.map(section =>
+    $('.filters').append(`
+      <button class='terciary'
+        id='${section.toLowerCase()}'> ${section}
+      </button>`
+    )
+  );
+
+  //filter click
+  $('.terciary').click(function(){
+    $('body').animate({scrollTop: 0}, 'slow');
+    let hasId = $(this).attr('id');
+
+    $('.terciary').removeClass('filter-active');  $(this).addClass('filter-active');
+
+    hasId == sections[0].toLowerCase() ?
+      allWater(learn):
+      waterFilter(hasId.toLowerCase());
+
+  });
+  $('#all').addClass('filter-active');
+
+
+  //show cards
+  $('.grid-main').html(`<div class='card' style='display:none;'>`);
+  allWater(learn);
+
+
+  //filters by section name === id
+  function waterFilter(id){
+    $('.card').fadeOut('slow', () => {
+      $('.card').remove();
+
+      //adds new filtered cards
+      Object.keys(learn)
+        .filter(key => learn[key].section == id)
+        .map(key => cardGenerator(learn, key));
+
+      //shows new cards
+      $('.card').fadeIn('slow');
+    });
+  }
+
+});
