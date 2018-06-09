@@ -6,14 +6,13 @@
   background-color: $semi-white-blue;
   margin-bottom: 30px;
   border-radius: 4px;
-  padding: 0 20px;
+  padding: 0 8px;
   svg{
     @include flex(center, center, row);
     @include size(32px, 32px);
     padding: 8px;
-    fill: $white;
-    background-color: $blue-1;
+    fill: $blue-1;
     border-radius: 4pc;
-    margin-right: 20px;
+    margin-right: 10px;
   }
 }

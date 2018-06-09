@@ -1,2 +1,2 @@
 
-$('#learn').click();
+$('#build').click();

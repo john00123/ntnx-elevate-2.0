@@ -143,6 +143,7 @@ $('#learn').click(()=>{
 
 
   //filter
+
   sections.map(section =>
     $('.filters').append(`
       <button class='terciary'
@@ -151,7 +152,9 @@ $('#learn').click(()=>{
     )
   );
 
+
   //filter click
+
   $('.terciary').click(function(){
     $('body').animate({scrollTop: 0}, 'slow');
     let hasId = $(this).attr('id');
@@ -159,14 +162,14 @@ $('#learn').click(()=>{
     $('.terciary').removeClass('filter-active');  $(this).addClass('filter-active');
 
     hasId == sections[0].toLowerCase() ?
-      allWater(learn):
-      waterFilter(hasId.toLowerCase());
-
+    allWater(learn): waterFilter(hasId.toLowerCase());
   });
+
   $('#all').addClass('filter-active');
 
 
   //show cards
+
   $('.grid-main').html(`<div class='card' style='display:none;'>`);
   allWater(learn);
 

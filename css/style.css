@@ -97,7 +97,7 @@ nav {
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   border-radius: 4px;
   background-color: white;
-  padding: 15px;
+  padding: 20px;
   position: relative;
 }
 
@@ -173,7 +173,7 @@ nav {
   background-color: #f4fbff;
   margin-bottom: 30px;
   border-radius: 4px;
-  padding: 0 20px;
+  padding: 0 8px;
 }
 
 .active-validation svg {
@@ -185,10 +185,9 @@ nav {
   width: 32px;
   box-sizing: border-box;
   padding: 8px;
-  fill: #FFFFFF;
-  background-color: #22A5F7;
+  fill: #22A5F7;
   border-radius: 4pc;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 html {
@@ -266,4 +265,52 @@ main {
 
 .hero {
   padding: 80px 0;
+}
+
+.primary {
+  margin: 0;
+  border-radius: 4px;
+  padding: 11px 15px;
+  color: #FFFFFF;
+  font: 400 14px/10px "nutanix_soft", san-serif;
+  font-weight: 500;
+  border: none;
+  text-decoration: none;
+  background-color: #22A5F7;
+  outline: none;
+}
+
+.primary:hover {
+  color: #FFFFFF;
+  cursor: pointer;
+  background-color: #1f88de;
+}
+
+.primary:active {
+  color: #FFFFFF;
+  background-color: #1b6dc6;
+}
+
+.primary span {
+  height: 10px;
+  display: block;
+  font-weight: 500;
+  line-height: 9pt;
+}
+
+.grow {
+  animation: example 600ms cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
+}
+
+@keyframes example {
+  from {
+    color: #22272E;
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+  to {
+    color: transparent;
+    transform: scale3d(3, 3, 1);
+    opacity: 0.03;
+  }
 }
