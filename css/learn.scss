@@ -43,3 +43,10 @@
   color:white;
   code{color:white;}
 }
+
+
+@media only screen and (max-width: 600px) {
+  .featured,.featured2 {
+    grid-column: span 1;
+  }
+}

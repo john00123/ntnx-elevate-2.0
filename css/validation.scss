@@ -1,0 +1,11 @@
+
+//validation layout
+.grid-validation{
+  @include size(auto, 100%);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  background-color:$background-color-3;
+  border-radius: 4px;
+  padding: 20px;
+}

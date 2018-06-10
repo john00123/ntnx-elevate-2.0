@@ -68,6 +68,7 @@ $('#build').click(()=>{
       </button>`
     )
   );
+  $('#all').addClass('filter-active');
 
   //show cards
   $('.grid-main').html(`<div class='card' style='display:none;'>`);
