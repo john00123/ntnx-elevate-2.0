@@ -5,7 +5,6 @@
 @import 'body';
 @import 'learn';
 @import 'build';
-@import 'validation';
 
 html{
   @include font;
@@ -25,9 +24,7 @@ code{
   text-transform: capitalize;
   font:$p;
 }
-kbd{font:$p; font-weight: 500;}
 
-.alt{ color: $font-color-2};
 
 //main layout
 main{
@@ -38,8 +35,11 @@ main{
 }
 
 .subtitle{ line-height: 1.5 }
-.hero{ padding: 50px 0 80px 0;}
+.hero{ padding: 80px 0;}
 .primary { @include primary }
+
+
+
 
 .chat-container{
   border-radius: 4px;
@@ -90,7 +90,7 @@ aside{
 
   .uploaded-file{
     margin: 10px 0;
-    
+
     h3,p{margin:0; line-height: 1.2}
     h3{margin-bottom: 5px; font-size:12px;}
     padding-left: 40px;

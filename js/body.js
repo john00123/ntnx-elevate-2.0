@@ -9,7 +9,7 @@ function cardGenerator(object, key){
       <code>${object[key].section}</code>
       <h3>  ${object[key].type}   </h3>
     </div>`
-  )
+  );
 }
 
 
