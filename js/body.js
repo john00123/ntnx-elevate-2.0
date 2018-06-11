@@ -10,6 +10,7 @@ function cardGenerator(object, key){
       <h3>  ${object[key].type}   </h3>
     </div>`
   );
+
 }
 
 
@@ -34,14 +35,8 @@ function allWater(object){
 
     if (Object.keys(object)[0] == 'software'){
       $('.card h3').remove();
-      $("#validation-name-1" ).click(function(e) {
-          e.preventDefault();
-          $(this).addClass( "grow" ).one("animationstart", function(){
-            setTimeout(function(){ details() }, 200);
-          }).one("animationend", function(){
-              $(this).removeClass( "grow" );
-
-          });
+      $("#validation-name-1" ).click(function() {
+        setTimeout(function(){ details() }, 200);
       });
     }
   });

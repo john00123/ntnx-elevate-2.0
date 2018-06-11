@@ -102,6 +102,17 @@ nav {
   position: relative;
 }
 
+.card::before {
+  content: '';
+  position: absolute;
+  background-color: white;
+  mix-blend-mode: multiply;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  left: 0;
+}
+
 .card h2 {
   line-height: 1.5;
 }
@@ -118,7 +129,11 @@ nav {
 }
 
 .card:active {
-  transform: scale3d(0.94, 0.94, 0);
+  transform: scale3d(0.98, 0.98, 1);
+}
+
+.card:active::before {
+  animation: example 600ms cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
 }
 
 .terciary {
@@ -200,25 +215,6 @@ nav {
   fill: #22A5F7;
   border-radius: 4pc;
   margin-right: 10px;
-}
-
-.grow {
-  position: relative;
-}
-
-.grow::after {
-  content: '';
-  background-color: red;
-  z-index: -1;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  border-radius: 4px;
-  left: 0;
-}
-
-.grow::after {
-  animation: example 600ms cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
 }
 
 @keyframes example {
