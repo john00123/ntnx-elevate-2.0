@@ -129,6 +129,7 @@ aside{
       position: relative;
       font:$p;
       font-weight: 600;
+      
     &::after{
       position: absolute;
       content: '';
